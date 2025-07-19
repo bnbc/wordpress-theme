@@ -1,0 +1,4 @@
+.crossroad-pages { display: flex; flex-wrap: wrap; gap: 1rem; }
+.crossroad-page { width: calc(33.333% - 1rem); box-sizing: border-box; }
+.crossroad-page img { width: 100%; height: auto; display: block; }
+.crossroad-page h2 { font-size: 1.25rem; margin-top: 0.5rem; }

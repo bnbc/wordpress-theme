@@ -1,0 +1,19 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "twentytwentyfive-child/crossroad-pages",
+    "title": "Crossroad Pages",
+    "category": "widgets",
+    "icon": "grid-view",
+    "description": "Affiche une grille de liens vers des pages sélectionnées.",
+    "textdomain": "twentytwentyfive-child",
+    "editorScript": "file:./index.js",
+    "style": "file:./style.css",
+    "render": "file:./render.php",
+    "attributes": {
+        "pages": {
+            "type": "string",
+            "default": ""
+        }
+    }
+}
