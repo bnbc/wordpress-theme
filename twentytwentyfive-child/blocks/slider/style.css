@@ -1,0 +1,6 @@
+.slider-block { position: relative; overflow: hidden; }
+.slider-block .slide { display: none; }
+.slider-block .slide img, .slider-block .slide video { width: 100%; height: auto; }
+.slider-block .prev, .slider-block .next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; padding: 0.5em; cursor: pointer; }
+.slider-block .prev { left: 0; }
+.slider-block .next { right: 0; }

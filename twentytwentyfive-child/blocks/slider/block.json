@@ -1,0 +1,23 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "twentytwentyfive-child/slider",
+    "title": "Slider",
+    "category": "widgets",
+    "icon": "images-alt2",
+    "description": "Affiche un slider d'images ou vidéos.",
+    "textdomain": "twentytwentyfive-child",
+    "editorScript": "file:./index.js",
+    "script": "file:./slider.js",
+    "style": "file:./style.css",
+    "render": "file:./render.php",
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "slides": {
+            "type": "array",
+            "default": []
+        }
+    }
+}
