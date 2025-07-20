@@ -77,6 +77,7 @@
                 el( 'div', { className: 'crossroad-pages' },
                     pages.map( function( id ) {
                         return el( PagePreview, { id: id, key: id, onRemove: removePage } );
+
                     } ),
                     el( Button, {
                         icon: 'plus',
