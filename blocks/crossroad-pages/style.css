@@ -1,3 +1,7 @@
+.crossroad-pages-container {
+    max-width: 100% !important;
+}
+
 .crossroad-pages { display: flex; flex-wrap: wrap; gap: 1rem; }
 .crossroad-page {
     width: calc(33.333% - 1rem);
