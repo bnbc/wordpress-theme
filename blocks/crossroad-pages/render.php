@@ -4,6 +4,7 @@ $ids = array_filter( $ids );
 if ( empty( $ids ) ) {
     return '';
 }
+
 $query = new WP_Query( [
     'post_type' => 'page',
     'post__in'  => $ids,
@@ -11,8 +12,9 @@ $query = new WP_Query( [
     'posts_per_page' => -1,
 ] );
 if ( ! $query->have_posts() ) {
-    return '';
+    return 'ko';
 }
+
 ob_start();
 ?>
 <div class="crossroad-pages">
@@ -30,4 +32,5 @@ ob_start();
 </div>
 <?php
 wp_reset_postdata();
-return ob_get_clean();
+$output = ob_get_contents();
+return $output;
