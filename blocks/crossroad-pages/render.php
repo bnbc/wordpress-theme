@@ -8,6 +8,7 @@ $query = new WP_Query( [
     'post_type' => 'page',
     'post__in'  => $ids,
     'orderby'   => 'post__in',
+    'posts_per_page' => -1,
 ] );
 if ( ! $query->have_posts() ) {
     return '';

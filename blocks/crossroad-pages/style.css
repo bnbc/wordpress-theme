@@ -1,7 +1,7 @@
 .crossroad-pages { display: flex; flex-wrap: wrap; gap: 1rem; }
 .crossroad-page {
     width: calc(33.333% - 1rem);
-    padding-top: 33.333%;
+    padding-top: 100%;
     position: relative;
     background-size: cover;
     background-position: center;
@@ -22,4 +22,11 @@
     padding: 0.5rem;
     text-align: center;
     box-sizing: border-box;
+}
+
+.crossroad-remove {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    z-index: 2;
 }

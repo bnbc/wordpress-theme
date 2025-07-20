@@ -15,6 +15,7 @@
 
     function PagePreview( props ) {
         var id = props.id;
+        var onRemove = props.onRemove;
         var record = useSelect( function( select ) {
             var page = select( 'core' ).getEntityRecord( 'postType', 'page', id );
             var media = page && page.featured_media ? select( 'core' ).getMedia( page.featured_media ) : null;
@@ -31,6 +32,13 @@
         }
 
         return el( 'div', { className: 'crossroad-page', style: style, key: id },
+            el( Button, {
+                className: 'crossroad-remove',
+                icon: 'no-alt',
+                label: 'Supprimer',
+                onClick: function() { onRemove( id ); },
+                'aria-label': 'Supprimer'
+            } ),
             el( 'span', { className: 'crossroad-page-title' }, record.page.title.rendered )
         );
     }
@@ -61,10 +69,15 @@
                 setOpen( false );
             }
 
+            function removePage( id ) {
+                setAttributes( { pages: pages.filter( function( p ) { return p !== id; } ) } );
+            }
+
             return el( 'div', {},
                 el( 'div', { className: 'crossroad-pages' },
                     pages.map( function( id ) {
-                        return el( PagePreview, { id: id, key: id } );
+                        return el( PagePreview, { id: id, key: id, onRemove: removePage } );
+
                     } ),
                     el( Button, {
                         icon: 'plus',
