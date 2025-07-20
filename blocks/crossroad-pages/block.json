@@ -12,8 +12,11 @@
     "render": "file:./render.php",
     "attributes": {
         "pages": {
-            "type": "string",
-            "default": ""
+            "type": "array",
+            "items": {
+                "type": "number"
+            },
+            "default": []
         }
     }
 }
